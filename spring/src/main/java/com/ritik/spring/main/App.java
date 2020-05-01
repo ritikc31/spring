@@ -1,4 +1,4 @@
-package com.ritik.spring.tutorial_1;
+package com.ritik.spring.main;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;

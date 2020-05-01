@@ -1,4 +1,4 @@
-package com.ritik.spring.tutorial_1;
+package com.ritik.spring.main;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -9,9 +9,6 @@ import org.junit.jupiter.api.Test;
  */
 public class AppTest 
 {
-    /**
-     * Rigourous Test :-)
-     */
 	@Test
     public void testApp()
     {
