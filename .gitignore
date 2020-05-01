@@ -1,0 +1,5 @@
+.metadata
+*.class
+spring/target
+spring/.settings
+spring/.*
