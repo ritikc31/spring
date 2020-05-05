@@ -3,5 +3,21 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="person" class="com.ritik.spring.person.Person"/>
+	<!-- bean with only values -->
+	<bean id="person1" class="com.ritik.spring.person.Person">
+		<constructor-arg value="12"></constructor-arg>
+		<constructor-arg value="Marry"></constructor-arg>
+	</bean>
+	
+	<!-- bean with indexed values(index of args in constructor) -->
+	<bean id="person2" class="com.ritik.spring.person.Person">
+		<constructor-arg index="1" value='John'></constructor-arg>
+		<constructor-arg index="0" value="13"></constructor-arg>
+	</bean>
+	
+	<!-- bean with name of constructor params and values -->
+	<bean id="person3" class="com.ritik.spring.person.Person">
+		<constructor-arg name="name" value="Mark"></constructor-arg>
+		<constructor-arg name="id" value="14"></constructor-arg>
+	</bean>
 </beans>
