@@ -3,21 +3,23 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<!-- bean with only values -->
+	<!-- bean with name of constructor params and values and setting property using value as attribute-->
 	<bean id="person1" class="com.ritik.spring.person.Person">
-		<constructor-arg value="12"></constructor-arg>
-		<constructor-arg value="Marry"></constructor-arg>
-	</bean>
-	
-	<!-- bean with indexed values(index of args in constructor) -->
-	<bean id="person2" class="com.ritik.spring.person.Person">
-		<constructor-arg index="1" value='John'></constructor-arg>
-		<constructor-arg index="0" value="13"></constructor-arg>
-	</bean>
-	
-	<!-- bean with name of constructor params and values -->
-	<bean id="person3" class="com.ritik.spring.person.Person">
 		<constructor-arg name="name" value="Mark"></constructor-arg>
 		<constructor-arg name="id" value="14"></constructor-arg>
+		<property name="taxId" value="1234"/>
+		<property name="favouriteColor" value="yellow"/>
+	</bean>
+
+	<!-- bean with name of constructor params and values and setting property using value sub element-->
+	<bean id="person2" class="com.ritik.spring.person.Person">
+		<constructor-arg name="name" value="John"></constructor-arg>
+		<constructor-arg name="id" value="15"></constructor-arg>
+		<property name="taxId">
+			<value type="java.lang.Integer">4567</value>
+		</property>
+		<property name="favouriteColor">
+			<value type="java.lang.String">blue</value>
+		</property>
 	</bean>
 </beans>

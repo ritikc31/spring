@@ -24,9 +24,6 @@ public class App
         Person person2 = (Person) context.getBean("person2");
         System.out.println(person2);
         
-        Person person3 = (Person) context.getBean("person3");
-        System.out.println(person3);
-        
 
         
 //        cast it to abstract class AbstractApplicationContext to call close method independent of child class

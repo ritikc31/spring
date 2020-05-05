@@ -4,8 +4,19 @@ public class Person {
 
 	private int id;
 	private String name;
+	private int taxId;
+	private String favouriteColor;
 
-	//for creating bean with no constructor args defined 
+	// we must follow camelCase naming convention for field and setters
+	public void setTaxId(int taxId) {
+		this.taxId = taxId;
+	}
+
+	public void setFavouriteColor(String favouriteColor) {
+		this.favouriteColor = favouriteColor;
+	}
+
+	// for creating bean with no constructor args defined
 	public Person() {
 	}
 
@@ -20,6 +31,6 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", name=" + name + "]";
+		return "Person [id=" + id + ", name=" + name + ", taxId=" + taxId + ", favouriteColor=" + favouriteColor + "]";
 	}
 }
