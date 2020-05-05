@@ -1,11 +1,18 @@
 package com.ritik.spring.person;
 
+import com.ritik.spring.person.address.Address;
+
 public class Person {
 
 	private int id;
 	private String name;
 	private int taxId;
 	private String favouriteColor;
+	private Address address;
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 
 	// we must follow camelCase naming convention for field and setters
 	public void setTaxId(int taxId) {
@@ -31,6 +38,7 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", name=" + name + ", taxId=" + taxId + ", favouriteColor=" + favouriteColor + "]";
+		return "Person [id=" + id + ", name=" + name + ", taxId=" + taxId + ", favouriteColor=" + favouriteColor
+				+ ", address=" + address + "]";
 	}
 }

@@ -20,10 +20,7 @@ public class App
         //getting an object by bean id
         Person person1 = (Person) context.getBean("person1");
         System.out.println(person1);
-        
-        Person person2 = (Person) context.getBean("person2");
-        System.out.println(person2);
-        
+       
 
         
 //        cast it to abstract class AbstractApplicationContext to call close method independent of child class
