@@ -1,7 +1,22 @@
 package com.ritik.spring.person;
 
+import java.util.List;
+
+import com.ritik.spring.Fruit;
+
 public class Person {
-	public void speak() {
-		System.out.println("Hello...");
+	private String name;
+	private List<Fruit> favouritFruits;
+
+	public Person(String name, List<Fruit> favouritFruits) {
+		super();
+		this.name = name;
+		this.favouritFruits = favouritFruits;
 	}
+
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", favouritFruits=" + favouritFruits + "]";
+	}
+
 }

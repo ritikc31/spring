@@ -3,5 +3,29 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="person" class="com.ritik.spring.person.Person"/>
+	<bean name="apple" class="com.ritik.spring.Fruit">
+		<constructor-arg name="name" value="Apple" />
+		<constructor-arg name="taste" value="SWEET"/>
+	</bean>
+	
+	<bean name="orange" class="com.ritik.spring.Fruit">
+		<constructor-arg name="name" value="Orange" />
+		<constructor-arg name="taste" value="SOUR"/>
+	</bean>
+	
+	<bean name="mango" class="com.ritik.spring.Fruit">
+		<constructor-arg name="name" value="Mango" />
+		<constructor-arg name="taste" value="SWEET"/>
+	</bean>
+
+	<bean id="person" class="com.ritik.spring.person.Person">
+		<constructor-arg name="name" value="Alex"/>
+		<constructor-arg name="favouritFruits">
+			<list>
+				<ref bean="apple"/>
+				<ref bean="orange"/>
+				<ref bean="mango"/>
+			</list>
+		</constructor-arg>
+	</bean>
 </beans>
