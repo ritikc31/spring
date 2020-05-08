@@ -18,7 +18,7 @@
 		<constructor-arg name="taste" value="SWEET"/>
 	</bean>
 
-	<bean id="person" class="com.ritik.spring.person.Person">
+	<bean id="person1" class="com.ritik.spring.person.Person">
 		<constructor-arg name="name" value="Alex"/>
 		<constructor-arg name="favouritFruits">
 			<list>
@@ -27,5 +27,16 @@
 				<ref bean="mango"/>
 			</list>
 		</constructor-arg>
+	</bean>
+	
+	<!-- setting list property using setters -->
+	<bean id="person2" class="com.ritik.spring.person.Person">
+		<property name="name" value="James"/>
+		<property name="favouritFruits">
+			<list>
+				<ref bean="apple"/>
+				<ref bean="orange"/>
+			</list>
+		</property>
 	</bean>
 </beans>
