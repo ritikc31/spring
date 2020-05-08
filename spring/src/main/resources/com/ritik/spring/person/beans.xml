@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="person" class="com.ritik.spring.person.Person"/>
+	<bean id="person1" class="com.ritik.spring.person.Person">
+		<constructor-arg name="name">
+			<value>Tony</value>
+		</constructor-arg>
+		<constructor-arg name="favouritFruits">
+			<list>
+				<value>Orange</value>
+				<value>Banana</value>
+				<value>Kiwi</value>
+				<value>Pear</value>
+				<value>Orange</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<!-- use set element to give unique values -->
+	<bean id="person2" class="com.ritik.spring.person.Person">
+		<constructor-arg name="name">
+			<value>Amanda</value>
+		</constructor-arg>
+		<constructor-arg>
+			<set>
+				<value>Guava</value>
+				<value>Grapes</value>
+				<value>Pineapple</value>
+				<value>Apple</value>
+				<value>Grapes</value>
+				<value>Orange</value>
+			</set>
+		</constructor-arg>
+	</bean>
 </beans>
