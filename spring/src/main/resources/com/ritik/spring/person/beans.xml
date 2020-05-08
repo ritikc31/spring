@@ -3,5 +3,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="person" class="com.ritik.spring.person.Person"/>
+	<bean id="person" class="com.ritik.spring.person.Person" scope="singleton">
+		<property name="name">
+			<value>Mark</value>
+		</property>
+	</bean>
 </beans>
