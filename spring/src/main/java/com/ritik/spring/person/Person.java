@@ -10,22 +10,6 @@ public class Person {
 	private String favouriteColor;
 	private Address address;
 	
-	/* factory method in class 
-	 * this method must be static
-	 * this method must take the arguments which you are passing as constructor arguments
-	 * it must have setters for property which you are passing as property
-	 */
-	public static Person getInstance(int id, String name) {
-		System.out.println("Person created using factoty method");
-		return new Person(id, name);
-	}
-	
-	/* overridden factory method if you are not passing any constructor argument*/ 
-	public static Person getInstance() {
-		System.out.println("Person created using factoty method with no perms");
-		return new Person();
-	}
-
 	public void setId(int id) {
 		this.id = id;
 	}
@@ -48,11 +32,11 @@ public class Person {
 	}
 
 	// for creating bean with no constructor args defined
-	private Person() {
+	public Person() {
 	}
 
-	/* constructor is marked as private to retrict object creation using it */
-	private Person(int id, String name) {
+	/* need to mark it public to allow object creation using it */
+	public Person(int id, String name) {
 		this.id = id;
 		this.name = name;
 	}

@@ -2,7 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- bean with name of constructor params and values and setting property using value sub element -->
-	<bean id="person1" class="com.ritik.spring.person.Person" factory-method="getInstance">
+	<bean id="person1" class="com.ritik.spring.person.Person" factory-method="getInstance" factory-bean="personfactory">
 		<constructor-arg name="id" value="15" type="int"></constructor-arg>
 		<constructor-arg name="name" value="John" type="java.lang.String"></constructor-arg>
 		<property name="taxId">
@@ -16,7 +16,7 @@
 		</property>
 	</bean>
 
-	<bean id="person2" class="com.ritik.spring.person.Person" factory-method="getInstance">
+	<bean id="person2" class="com.ritik.spring.person.Person" factory-method="getInstance" factory-bean="personfactory">
 		<property name="id" value="16"></property>
 		<property name="name" value="Mark"></property>
 		<property name="taxId">
@@ -38,4 +38,5 @@
 			<value type="java.lang.Integer">123458</value>
 		</property>
 	</bean>
+	<bean id="personfactory" class="com.ritik.spring.person.PersonFactory"></bean>
 </beans>
