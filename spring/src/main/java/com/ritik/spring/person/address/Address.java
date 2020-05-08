@@ -20,6 +20,14 @@ public class Address {
 	public void onDestroy() {
 		System.out.println("Address Destroyed : " + this);
 	}
+	
+	public void create() {
+		System.out.println("Address Created(default) : " + this);
+	}
+
+	public void destroy() {
+		System.out.println("Address Destroyed(default) : " + this);
+	}
 
 	@Override
 	public String toString() {

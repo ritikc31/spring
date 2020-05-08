@@ -9,6 +9,7 @@ import com.ritik.spring.person.Person;
  * init method is called by spring after complete instanciation of bean
  * destroy method is called by spring before destroying the bean
  * global init and global destroy is defined at beans level 
+ * you can define either local methods or global methods
  */
 public class App 
 {
