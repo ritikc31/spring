@@ -36,6 +36,14 @@ public class Person {
 		System.out.println("Hello...");
 	}
 
+	public void onCreate() {
+		System.out.println("Person Created : " + this);
+	}
+
+	public void onDestroy() {
+		System.out.println("Person Destroyed : " + this);
+	}
+
 	@Override
 	public String toString() {
 		return "Person [id=" + id + ", name=" + name + ", taxId=" + taxId + ", favouriteColor=" + favouriteColor

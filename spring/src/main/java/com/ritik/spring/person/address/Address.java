@@ -13,6 +13,14 @@ public class Address {
 		this.postCode = postCode;
 	}
 
+	public void onCreate() {
+		System.out.println("Address Created : " + this);
+	}
+
+	public void onDestroy() {
+		System.out.println("Address Destroyed : " + this);
+	}
+
 	@Override
 	public String toString() {
 		return "Address [street=" + street + ", postCode=" + postCode + "]";

@@ -5,7 +5,8 @@
 
 	<!-- bean with name of constructor params and values and setting property 
 		using value sub element -->
-	<bean id="person1" class="com.ritik.spring.person.Person">
+	<bean id="person1" class="com.ritik.spring.person.Person"
+		destroy-method="onDestroy" init-method="onCreate">
 		<constructor-arg name="name" value="John"></constructor-arg>
 		<constructor-arg name="id" value="15"></constructor-arg>
 		<property name="taxId">
@@ -20,7 +21,8 @@
 	</bean>
 
 	<bean id="address1"
-		class="com.ritik.spring.person.address.Address">
+		class="com.ritik.spring.person.address.Address" init-method="onCreate"
+		destroy-method="onDestroy">
 		<property name="street">
 			<value type="java.lang.String">21 Church Lane</value>
 		</property>
