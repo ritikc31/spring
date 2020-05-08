@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<!-- bean with name of constructor params and values and setting property 
-		using value sub element -->
+	<!-- bean with name of constructor params and values and setting property using value sub element -->
 	<bean id="person1" class="com.ritik.spring.person.Person">
 		<constructor-arg name="name" value="John"></constructor-arg>
 		<constructor-arg name="id" value="15"></constructor-arg>
@@ -19,8 +18,7 @@
 		</property>
 	</bean>
 
-	<bean id="address1"
-		class="com.ritik.spring.person.address.Address">
+	<bean id="address1" class="com.ritik.spring.person.address.Address">
 		<property name="street">
 			<value type="java.lang.String">21 Church Lane</value>
 		</property>
@@ -28,4 +26,12 @@
 			<value type="java.lang.Integer">123458</value>
 		</property>
 	</bean>
+
+	<!-- Creating a person beans using p namespace
+	setters must be defined to set property
+	p:propertyname-ref to give reference of a bean -->
+	
+	<bean id="person2" class="com.ritik.spring.person.Person" p:id="45" p:name="Mark" p:taxId="63473" p:address-ref="address2"/>
+	
+	<bean id="address2" class="com.ritik.spring.person.address.Address" p:street="25 Well lane" p:postCode="785873" />
 </beans>

@@ -10,6 +10,23 @@ public class Person {
 	private String favouriteColor;
 	private Address address;
 
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public void setAddress(Address address) {
 		this.address = address;
 	}
