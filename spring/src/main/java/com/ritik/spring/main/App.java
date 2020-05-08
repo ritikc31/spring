@@ -3,7 +3,6 @@ package com.ritik.spring.main;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import com.ritik.spring.person.Person;
 
@@ -20,6 +19,9 @@ public class App
         //getting an object by bean id
         Person person1 = (Person) context.getBean("person1");
         System.out.println(person1);
+        
+        Person person2 = (Person) context.getBean("person2");
+        System.out.println(person2);
        
 
         
